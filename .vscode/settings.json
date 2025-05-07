@@ -1,0 +1,30 @@
+{
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.wordWrap": "on",
+  "chat.editor.wordWrap": "on",
+  "notebook.output.wordWrap": true,
+  "diffEditor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontWeight": "normal",
+  "editor.codeActionsOnSave": {},
+  "files.trimFinalNewlines": false,
+  "files.trimTrailingWhitespace": false,
+  "search.exclude": {
+    "**/node_modules": false
+  }
+}

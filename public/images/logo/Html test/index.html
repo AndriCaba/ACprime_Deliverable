@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .min-h-screen {
+            min-height: 100vh;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .z-50 {
+            z-index: 50;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .bg {
+            background-color: #001e3c;
+        }
+
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .animate-spinPauseLoop {
+            animation: spinPauseLoop 2.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+            }
+            100% {
+                filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+            }
+        }
+
+        @keyframes spinPauseLoop {
+            0% {
+                transform: rotate(0deg);
+            }
+            30% {
+                transform: rotate(1080deg);
+            }
+            100% {
+                transform: rotate(1080deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-[#001e3c]">
+        <div class="flex flex-col items-center space-y-4">
+            <div class="relative flex h-32 w-32 items-center justify-center">
+                <img
+                    src="/images/logo/HD_Logo.png"
+                    alt="AC Prime Logo"
+                    class="animate-spinPauseLoop animate-glow h-24 w-24 object-contain"
+                />
+                <img
+                    src="/images/logo/ACprimeText.png"
+                    alt="AC Prime Insurance"
+                    class="absolute bottom-[-3.5rem] h-10 w-auto transform transition-all duration-1000 ease-out"
+                />
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div>
+        <header>
+            <!-- Navbar Placeholder -->
+            <nav>
+                <p>Navbar goes here</p>
+            </nav>
+        </header>
+        <main class="min-h-[80vh] pt-[65px]">
+            <p>Main content goes here</p>
+        </main>
+        <footer>
+            <!-- Footer Placeholder -->
+            <p>Footer goes here</p>
+        </footer>
+    </div>
+</body>
+</html>

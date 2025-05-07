@@ -1,0 +1,98 @@
+/* Life Details Page Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #004588;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004588;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #004588;
+  margin-bottom: 20px;
+}
+
+.feature-list h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #004588;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background: #e3eaf2;
+  border-radius: 8px;
+}
+
+.feature-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: none;
+}
+
+.feature-list.active ul {
+  display: block;
+}
+
+.cta-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cta-button button {
+  background-color: #ed4a00;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 300px;
+  }
+}

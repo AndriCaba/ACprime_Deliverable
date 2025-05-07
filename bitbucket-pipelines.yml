@@ -1,0 +1,13 @@
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        name: Deploy to Lightsail
+        script:
+          - apt-get update && apt-get install -y openssh-client
+          - mkdir -p ~/.ssh
+          - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          - chmod 600 ~/.ssh/id_rsa
+          - ssh-keyscan -H 18.141.49.214 >> ~/.ssh/known_hosts
+          - ssh -v -o StrictHostKeyChecking=no ubuntu@18.141.49.214 "bash /home/ubuntu/ac-prime-web/deploy.sh"
